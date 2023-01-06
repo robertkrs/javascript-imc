@@ -137,3 +137,7 @@ button:disabled {
 #mensagens-erro {
   color: #ff0000;
 }
+.fadeOut {
+  opacity: 0;
+  transition: 0.5s;
+}

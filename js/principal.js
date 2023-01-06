@@ -5,8 +5,7 @@ paciente.forEach((e) => {
 
   const imc_paciente = e.querySelector(".info-imc");
 
-  const erros = verificaPesoEAltura(peso.innerHTML, altura.innerHTML);
-  if (erros.length > 0) {
+  if (peso < 0 || peso > 250 || altura < 1.0 || altura > 2.5) {
     console.log("Peso invalido ou Altura invalidos");
     imc_paciente.innerHTML = "Peso Inválido";
     e.classList.add("invalido");
@@ -22,7 +21,7 @@ function calculaIMC(peso, altura) {
 function verificaPesoEAltura(paciente) {
   const erro = [];
   if (paciente.nome.length == 0) {
-    erros.push("O nome não pode ser em branco");
+    erro.push("O nome não pode ser em branco");
   }
   if (!verificaPeso(paciente.peso)) {
     erro.push("Peso Inválido");

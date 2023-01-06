@@ -22,7 +22,6 @@ const botao = document.getElementById("form-adiciona");
 
 botao.addEventListener("submit", (e) => {
   e.preventDefault(e);
-  console.log(e.nome);
 
   const paciente = extraiValor(e);
 
